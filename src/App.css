@@ -1,38 +1,130 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0e1744 0%, #110022 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  padding: 40px 10px 20px 10px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: rgba(40, 44, 52, 0.85);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  min-width: 320px;
+  max-width: 420px;
+  width: 100%;
+  margin-bottom: 32px;
+  padding: 32px 24px 24px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 2rem;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 600px) {
+  .App-header {
+    padding: 18px 6px 12px 6px;
+    font-size: 1.2rem;
+    min-width: unset;
+    max-width: 98vw;
+  }
+  .App {
+    padding: 10px 2px 10px 2px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 24px auto;
 }
+
+.todo-title {
+  flex: none;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.todo-header button {
+  background: #ff5e62;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.todo-header button:hover {
+  background: #ff3c41;
+}
+
+
+.add-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: 8px;
+}
+.add-btn:hover {
+  background: #1d4ed8;
+}
+
+
+button.complete-btn {
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: background 0.2s;
+}
+button.complete-btn:hover {
+  background: #16a34a;
+}
+
+button.delete-btn {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button.delete-btn:hover {
+  background: #dc2626;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px; 
+}
+
+
